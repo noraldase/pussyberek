@@ -1,7 +1,7 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigasi responsive untuk tampilan mobile (hamburger menu)
+    // Responsive navigation for mobile (hamburger menu)
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tutup menu navigasi saat link diklik (untuk mobile)
+    // Close nav menu when a link is clicked (for mobile)
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu.classList.contains('active')) {
@@ -23,49 +23,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Fungsi untuk menyalin alamat kontrak
+// Function to copy contract address
 function copyContract() {
     const contractAddress = document.querySelector('.address-text').innerText;
     navigator.clipboard.writeText(contractAddress).then(() => {
-        alert('Alamat Kontrak KANGO berhasil disalin ke clipboard: ' + contractAddress);
+        alert('KANGO Contract Address copied to clipboard: ' + contractAddress);
     }).catch(err => {
-        console.error('Gagal menyalin alamat: ', err);
-        alert('Gagal menyalin alamat kontrak. Silakan coba manual.');
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy contract address. Please try manually.');
     });
 }
 
-// Fungsi untuk tombol "Launch KANGO Bot" (di Hero Section)
+// Function for "Launch KANGO Bot" button (in Hero Section)
 function launchBot() {
-    // Ganti dengan link aktual bot Telegram KANGO Swap Anda
-    const telegramBotLink = 'https://t.me/your_kango_swap_bot'; // <--- PENTING: GANTI INI DENGAN LINK BOT TELEGRAM ASLI ANDA!
-    alert('Anda akan dialihkan ke KANGO Swap Bot di Telegram! Nikmati kemudahan swap AVAX.');
+    // Replace with your actual KANGO Swap Telegram bot link
+    const telegramBotLink = 'https://t.me/your_kango_swap_bot'; // <--- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL TELEGRAM BOT LINK!
+    alert('You will be redirected to the KANGO Swap Bot on Telegram! Enjoy seamless AVAX swaps.');
     window.open(telegramBotLink, '_blank');
 }
 
-// Fungsi untuk tombol "Learn More" (di Hero Section)
+// Function for "Learn More" button (in Hero Section)
 function learnMore() {
-    // Gulirkan ke bagian About atau bagian Features
+    // Scrolls to the About section or Features section
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Fungsi untuk tombol "Create Wallet" (di bagian "How to Buy")
+// Function for "Create Wallet" button (in "How to Buy" section)
 function createWallet() {
-    alert('Untuk menggunakan KANGO Swap Bot, Anda memerlukan wallet yang kompatibel dengan Avalanche C-Chain seperti MetaMask atau Trust Wallet. Pastikan Anda telah mengaturnya!');
-    // Opsional: Anda bisa mengarahkan pengguna ke halaman panduan atau unduhan wallet, contoh:
+    alert('To use the KANGO Swap Bot, you\'ll need an Avalanche C-Chain compatible wallet like MetaMask or Trust Wallet. Make sure you have it set up!');
+    // Optional: You could redirect users to a wallet guide or download page, e.g.:
     // window.open('https://metamask.io/download/', '_blank');
 }
 
-// Fungsi untuk tombol "Get Some AVAX" (di bagian "How to Buy")
+// Function for "Get Some AVAX" button (in "How to Buy" section)
 function getAvax() {
-    alert('Dapatkan AVAX dari bursa kripto terkemuka seperti Binance, Coinbase, KuCoin, atau bursa lain yang mendukung Avalanche C-Chain. Setelah itu, transfer AVAX ke wallet Avalanche Anda.');
-    // Opsional: Anda bisa mengarahkan pengguna ke daftar bursa, contoh:
+    alert('Acquire AVAX from leading crypto exchanges such as Binance, Coinbase, KuCoin, or any other exchange supporting Avalanche C-Chain. Then, transfer AVAX to your Avalanche wallet.');
+    // Optional: You could redirect users to a list of exchanges, e.g.:
     // window.open('https://coinmarketcap.com/currencies/avalanche/markets/', '_blank');
 }
 
-// Fungsi untuk tombol "Swap Now" (di bagian "How to Buy")
+// Function for "Buy KANGO Now" button (in "How to Buy" section, previously "Swap Now")
 function swapNow() {
-    // Mengarahkan pengguna langsung ke bot Telegram untuk swap
-    const telegramBotLink = 'https://t.me/your_kango_swap_bot'; // <--- PENTING: GANTI INI DENGAN LINK BOT TELEGRAM ASLI ANDA!
-    alert('Sekarang Anda bisa menukar AVAX Anda dengan KANGO langsung melalui KANGO Swap Bot di Telegram!');
+    // Redirects users directly to the Telegram bot for buying KANGO
+    const telegramBotLink = 'https://t.me/your_kango_swap_bot'; // <--- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL TELEGRAM BOT LINK!
+    alert('You can now buy KANGO with AVAX directly through the KANGO Swap Bot on Telegram!');
     window.open(telegramBotLink, '_blank');
 }

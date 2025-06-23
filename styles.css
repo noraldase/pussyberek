@@ -587,6 +587,40 @@ section {
     line-height: 1.6;
 }
 
+/* Whitepaper Section (NEW STYLES) */
+.whitepaper {
+    background-color: #f0f2f5; /* Consistent with other light sections */
+}
+
+.whitepaper-btn {
+    background-color: #E84142; /* Primary brand color for the button */
+    color: white;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex; /* To align icon and text */
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whitepaper-btn:hover {
+    background-color: #c72b2b; /* Darker shade on hover */
+    transform: translateY(-3px);
+}
+
+.whitepaper-btn i {
+    font-size: 1.2em; /* Icon size */
+}
+
+.whitepaper-note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
 /* Community Section */
 .community {
     background-color: #E84142; /* Red background for emphasis */

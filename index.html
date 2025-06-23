@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANGO COIN - The Apex AVAX Telegram Swap Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="KANGO COIN" class="logo">
+                <span>KANGO</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#tokenomics" class="nav-link">Tokenomics</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#community" class="nav-link">Community</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">KANGO: Your Gateway to AVAX DeFi on Telegram</h1>
+                <p class="hero-subtitle">Experience lightning-fast, secure, and user-friendly token swaps directly in your Telegram app, powered by Avalanche.</p>
+                <div class="contract-address">
+                    <span>KANGO Token Address (AVAX C-Chain):</span>
+                    <span class="address-text">0x555401d23d7bac4ddd6c919433917785353d937d</span>
+                    <button class="copy-btn" onclick="copyContract()">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="launchBot()">Launch KANGO Bot</button>
+                    <button class="btn btn-secondary" onclick="learnMore()">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/logo.png" alt="KANGO Mascot" class="mascot">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Revolutionizing AVAX Swaps with KANGO</h2>
+            <p class="section-subtitle">KANGO Coin fuels the **KANGO Swap Bot**, bringing decentralized exchange functionality to the familiar environment of Telegram on the Avalanche network.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The KANGO Swap Bot is built to simplify token trading on the Avalanche blockchain. We integrate directly with leading Avalanche DEXs, allowing users to execute swaps with ease, view real-time price data, and manage their portfolio—all through Telegram commands. Security and user experience are at the core of our development, ensuring a trustworthy and efficient trading journey.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>Instant</h3>
+                            <p>Swaps on AVAX</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Secure</h3>
+                            <p>Wallet Integration</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Trading Access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features of KANGO Swap Bot</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Intuitive Telegram Interface</h3>
+                    <p>Execute swaps with simple commands and interactive buttons, making DeFi accessible for all levels of users.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Lightning-Fast Swaps on AVAX</h3>
+                    <p>Leverage the high transaction speed and low fees of the Avalanche C-Chain for efficient trading.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Wallet Connection</h3>
+                    <p>Connect your existing Avalanche wallet securely without compromising your private keys.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Real-time Price & Charting</h3>
+                    <p>Access live price data, historical charts, and key market metrics for Avalanche tokens directly in Telegram.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bell"></i>
+                    <h3>Customizable Price Alerts</h3>
+                    <p>Set up notifications for specific token price movements or liquidity changes on Avalanche DEXs.</p>
+                {/div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Low Transaction Fees</h3>
+                    <p>Benefit from optimized transaction routing and competitive fees for all your AVAX swaps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="howtobuy" class="how-to-buy">
+        <div class="container">
+            <h2 class="section-title">How to Buy KANGO</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Wallet</h3>
+                    <p>Download MetaMask atau Trust Wallet dan atur jaringan Avalanche C-Chain untuk menyimpan token KANGO Anda dengan aman.</p>
+                    <button class="btn btn-outline" onclick="createWallet()">Create Wallet</button>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Some AVAX</h3>
+                    <p>Beli AVAX dari exchange seperti Binance, Coinbase, atau KuCoin dan transfer ke wallet Avalanche Anda.</p>
+                    <button class="btn btn-outline" onclick="getAvax()">Get AVAX</button>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Swap AVAX to KANGO</h3>
+                    <p>Gunakan KANGO Swap Bot di Telegram untuk menukar AVAX Anda dengan token KANGO dengan mudah.</p>
+                    <button class="btn btn-outline" onclick="swapNow()">Swap Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tokenomics" class="tokenomics">
+        <div class="container">
+            <h2 class="section-title">KANGO Tokenomics</h2>
+            <div class="tokenomics-content">
+                <div class="tokenomics-chart">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Distribution Chart</p>
+                    </div>
+                </div>
+                <div class="tokenomics-details">
+                    <div class="token-item">
+                        <span class="token-label">Total Supply:</span>
+                        <span class="token-value">10,000,000,000 KANGO</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-label">Bot Development & Operations:</span>
+                        <span class="token-value">40%</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-label">Liquidity Provision (AVAX DEXs):</span>
+                        <span class="token-value">30%</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-label">Marketing & Community Growth:</span>
+                        <span class="token-value">20%</span>
+                    </div>
+                    <div class="token-item">
+                        <span class="token-label">Team & Advisors:</span>
+                        <span class="token-value">10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title">Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q3 2025: Token Launch & Initial LP</h3>
+                        <p>• KANGO Token Smart Contract Deployment on Avalanche C-Chain<br>• Initial Liquidity Provision on leading Avalanche DEXs (e.g., Trader Joe)<br>• Launch Website & Whitepaper v1<br>• Initial Community Building & Social Media Presence</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q4 2025: Bot Alpha & Core Development</h3>
+                        <p>• **KANGO Swap Bot Alpha Version Release** (Basic Swap Functionality)<br>• Core Bot Development: Secure Wallet Integration, Basic Price Tracking<br>• Expand Marketing & Partnership Explorations with Avalanche-native projects<br>• Initiate Audit Process for Smart Contracts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q1 2026: Bot Enhancement & Ecosystem Growth</h3>
+                        <p>• Advanced Bot Features: Slippage Control, Gwei Customization, Basic Charting<br>• Customizable Price Alerts & Notifications within Telegram<br>• Introduce Portfolio Tracking within the KANGO Bot (displaying AVAX and linked token balances)<br>• Referral Program Launch & Community Incentives</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q2 2026: Expansion & Advanced Trading Tools</h3>
+                        <p>• Integrate with more Avalanche DEXs for optimized routing & better pricing<br>• Implement Advanced Trading Tools (e.g., Limit Orders via bot commands)<br>• Explore KANGO Staking/Farming for revenue share from bot fees<br>• UI/UX Improvements based on extensive community feedback & testing</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q3 2026 & Beyond: Decentralization & Innovation</h3>
+                        <p>• Governance Integration for KANGO holders (DAO initiation)<br>• Explore AI-powered Trading Signals & Strategy Automation (optional features)<br>• Research Fiat On/Off-ramp Integration (regional availability)<br>• Plan Multi-chain Swap Functionality (starting with select EVM chains)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="section-subtitle">Be part of the KANGO Revolution and shape the future of AVAX trading on Telegram!</p>
+            <div class="social-links">
+                <a href="#" class="social-link telegram">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="#" class="social-link twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" class="social-link discord">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="#" class="social-link github">
+                    <i class="fab fa-github"></i>
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="KANGO COIN" class="logo">
+                    <span>KANGO COIN</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KANGO COIN. All rights reserved. Hop into the future of AVAX DeFi!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
